@@ -1,0 +1,25 @@
+:root {
+  --bc-primary: #bbd6b8;
+  --color-primary: #dbe4c6;
+  --color-dark: #59695f;
+  --light-color: #999;
+  --disabled-color: #f4f7ee;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--bc-primary);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+button {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 1.8rem;
+}

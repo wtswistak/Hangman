@@ -1,0 +1,104 @@
+.container {
+  max-width: 60vw;
+  margin: 2.4rem auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2.4rem 7.6rem;
+  box-shadow: 0px 1px 10px var(--light-color);
+  text-align: center;
+  align-items: center;
+
+  &__letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__letter-button {
+    background-color: var(--color-primary);
+    color: #000;
+    width: 4.6rem;
+    height: 4.6rem;
+    margin: 0.4rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    border: 2px solid #000;
+    transition: 0.2s;
+    &:active {
+      transform: scale(1.05);
+    }
+    &:disabled {
+      border: 2px solid var(--light-color);
+      color: var(--light-color);
+      transform: none;
+      background-color: var(--disabled-color);
+      cursor: default;
+    }
+  }
+
+  &__guessing-word {
+    margin-top: 3.6rem;
+    display: flex;
+    justify-content: center;
+    color: var(--color-dark);
+  }
+  &__single-letter {
+    width: 2.8rem;
+    height: 3.6rem;
+    text-align: center;
+    font-size: 3.6rem;
+  }
+  &__result-text {
+    margin: 3.6rem 0;
+    text-align: center;
+    font-size: 3.6rem;
+    color: #000;
+  }
+  &__reset-button {
+    padding: 1.6rem 3.2rem;
+    margin-bottom: 2.4rem;
+    background-color: var(--color-primary);
+    border-radius: 0.6rem;
+    border: 2px solid black;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 0px 5px 0.05px var(--light-color);
+    }
+  }
+  @include breakpoint(desktop) {
+    max-width: 85vw;
+  }
+  @include breakpoint(tablet) {
+    max-width: 100vw;
+    padding: 2.4rem 4.2rem;
+    margin: 1.2rem 1.2rem;
+    &__letter-button {
+      height: 4rem;
+      width: 4rem;
+    }
+    &__guessing-word {
+      margin-top: 2.4rem;
+    }
+    &__single-letter {
+      font-size: 3rem;
+      width: 2.4rem;
+      height: 3rem;
+    }
+    &__result-text {
+      font-size: 3rem;
+      margin-top: 2.4rem;
+    }
+    &__reset-button {
+      font-size: 1.6rem;
+      padding: 1.2rem 2.4rem;
+    }
+  }
+  @include breakpoint(tablet) {
+    padding: 0.4rem 0.8rem;
+  }
+  @include breakpoint(small-mobile) {
+    margin: 0;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
